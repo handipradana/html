@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Hello World - AWS CI/CD</title>
+</head>
+<body>
+    <h1>🎉 Hello Worlds!</h1>
+    <h2>Website ini berhasil di-deploy menggunakan AWS CI/CD!</h2>
+    
+    <p><strong>Cara kerja sistem:</strong></p>
+    <ul>
+        <li>1. Developer ubah kode di GitHub</li>
+        <li>2. GitHub kirim sinyal ke AWS CodePipeline</li>
+        <li>3. AWS CodeBuild proses file-file</li>
+        <li>4. AWS CodeDeploy upload ke server EC2</li>
+        <li>5. Website otomatis update!</li>
+    </ul>
+    
+    <p><strong>Informasi Deploy:</strong></p>
+    <p>Version: 1.0</p>
+    <p>Tanggal Build: <span id="tanggal"></span></p>
+    <p>Status: ✅ Berhasil</p>
+    
+    <hr>
+    <p><em>Dibuat dengan ❤️ menggunakan AWS Services</em></p>
+    
+    <script>
+        // Tampilkan tanggal sekarang
+        document.getElementById('tanggal').innerHTML = new Date().toLocaleString('id-ID');
+    </script>
+</body>
+</html>

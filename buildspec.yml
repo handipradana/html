@@ -1,0 +1,24 @@
+version: 0.2
+
+phases:
+  install:
+    runtime-versions:
+      nodejs: 18
+  pre_build:
+    commands:
+      - echo Logging in to Amazon ECR...
+      - echo Build started on `date`
+  build:
+    commands:
+      - echo Build phase started on `date`
+      - echo Compiling the static files
+      # Jika ada proses build khusus, tambahkan di sini
+      - echo Build completed on `date`
+  post_build:
+    commands:
+      - echo Build completed on `date`
+
+artifacts:
+  files:
+    - '**/*'
+  name: static-website-$(date +%Y-%m-%d)
